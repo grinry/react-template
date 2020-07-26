@@ -7,7 +7,7 @@ export class AxiosError extends Error {
 }
 
 const axios = Axios.create({
-  baseURL: '/api',
+  baseURL: process.env.REACT_APP_BASE_API,
   headers: {
     accept: 'application/json',
     'content-type': 'application/json',
