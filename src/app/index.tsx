@@ -15,6 +15,7 @@ import { GlobalStyle } from 'styles/global-styles';
 import { HomePage } from './containers/HomePage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
 import { ProtectedRoute } from './containers/ProtectedRoute';
+import { AboutPage } from './containers/AboutPage/Loadable';
 
 export function App() {
   return (
@@ -28,7 +29,8 @@ export function App() {
 
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <ProtectedRoute exact path="/protected" component={HomePage} />
+        <Route exact path="/about" component={AboutPage} />
+        <ProtectedRoute exact path="/protected" component={AboutPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />

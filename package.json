@@ -67,7 +67,8 @@
     "lint:fix": "yarn eslint -- --fix src",
     "lint:css": "stylelint src/**/*.css",
     "generate": "cross-env TS_NODE_PROJECT='./internals/ts-node.tsconfig.json' plop --plopfile internals/generators/plopfile.ts",
-    "prettify": "prettier --write"
+    "prettify": "prettier --write",
+    "postbuild": "react-snap"
   },
   "browserslist": {
     "production": [
@@ -115,5 +116,8 @@
         "statements": 90
       }
     }
+  },
+  "devDependencies": {
+    "react-snap": "1.23.0"
   }
 }
